@@ -2,7 +2,7 @@
 
 An AI-powered interview preparation app that helps you practice behavioral and technical interviews with real-time feedback.
 
-**[Live Demo](https://ai-interview-coach-nwrtvkf6.streamlit.app)**
+**[Live Demo](https://ai-interview-coach-nwrtvkf6rnjzgq3whijkbu.streamlit.app/)**
 
 ![AI Interview Coach Screenshot](screenshot.png)
 
