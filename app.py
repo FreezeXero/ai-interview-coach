@@ -351,17 +351,11 @@ st.markdown("""
 # --- Sidebar ---
 st.sidebar.markdown("## ⚙️ Settings")
 
-api_key = st.sidebar.text_input("API Key", type="password", placeholder="sk-ant-...")
-
-if not api_key:
-    st.markdown("""
-    <div class="main-header">
-        <h1>AI <span class="accent">Interview Coach</span></h1>
-        <p>Practice interviews with AI-powered feedback</p>
-    </div>
-    """, unsafe_allow_html=True)
-    st.warning("👈 Enter your Anthropic API key in the sidebar to start")
-    st.info("Get your key at console.anthropic.com")
+# --- Get API key from secrets (no user input needed) ---
+try:
+    api_key = st.secrets["ANTHROPIC_API_KEY"]
+except KeyError:
+    st.error("API key not configured. Please contact the developer.")
     st.stop()
 
 # --- Initialize Anthropic Client ---
